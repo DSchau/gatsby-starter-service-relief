@@ -1,12 +1,7 @@
-const slugify = require('limax')
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
-exports.onCreateNode = function onCreateNode({ actions, getNode, node }) {
-  if (node.internal.type === `Airtable` && node.data.Category) {
-    const category = node.data.Category[0]
-    actions.createNodeField({
-      node,
-      name: `slug`,
-      value: slugify(category)
-    })
-  }
-}
+// You can delete this file if you're not using it
